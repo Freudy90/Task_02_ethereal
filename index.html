@@ -16,6 +16,13 @@
     		smartlook('init', '570c03ccd862e6c1df8e6bbe5be594a0f2747919', { region: 'eu' });
 		smartlook('record', { forms: true, numbers: true, emails: false, ips: true })
 			
+		let eventName = 'UserOpenUpsellWindow';
+		let properties = {
+		  "type": "SmallDiscLimit"
+		};
+		smartlook('track', eventName, properties);
+		</script>
+		
 		smartlook.identify('USER_ID', {
   		"name": "John Doe",
   		"email": "john.doe@example.com",
@@ -23,12 +30,6 @@
   		"currency": "USD",
   		"price": 150
 		})
-		let eventName = 'UserOpenUpsellWindow';
-		let properties = {
-		  "type": "SmallDiscLimit"
-		};
-		smartlook('track', eventName, properties);
-		</script>
 		
 		<title>Ethereal by HTML5 UP</title>
 		<meta charset="utf-8" />
